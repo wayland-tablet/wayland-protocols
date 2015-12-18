@@ -174,7 +174,7 @@
       reuses the wp_tablet_tool object to indicate that the object's
       respective physical tool has come into proximity of a tablet again.
       A client must not call wp_tablet_tool.destroy until it receives a
-      wp_tablet_tool.release event.
+      wp_tablet_tool.removed event.
 
       A wp_tablet_tool object's relation to a physical tool depends on the
       tablet's ability to report serial numbers. If the tablet supports
@@ -182,7 +182,7 @@
       and can be identified even when used on multiple tablets.
 
       A tablet tool has a number of static characteristics, e.g. tool type,
-      serial_id and capabilities. These capabilities are sent in an event
+      hwserial and capabilities. These capabilities are sent in an event
       sequence after the wp_tablet_seat.tool_added event before any actual
       events from this tool. This initial event sequence is terminated by a
       wp_tablet_tool.done event.
@@ -511,7 +511,7 @@
 	This destroys the client's resource for this tablet object.
 
 	A client must not issue this request until it receives a
-	wp_tablet.remove event.
+	wp_tablet.removed event.
       </description>
     </request>
 
