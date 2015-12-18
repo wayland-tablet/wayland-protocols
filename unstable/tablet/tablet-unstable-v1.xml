@@ -173,7 +173,7 @@
       reuses the wp_tablet_tool object to indicate that the object's
       respective physical tool has come into proximity of a tablet again.
       A client must not call wp_tablet_tool.destroy until it receives a
-      wp_tablet_tool.release event.
+      wp_tablet_tool.removed event.
 
       A wp_tablet_tool object's uniqueness depends on the tablet's ability
       to report serial numbers. If the tablet doesn't support this
@@ -507,7 +507,7 @@
 	This destroys the client's resource for this tablet object.
 
 	A client must not issue this request until it receives a
-	wp_tablet.remove event.
+	wp_tablet.removed event.
       </description>
     </request>
 
